@@ -1,0 +1,884 @@
+[
+  {
+    "id": 1,
+    "name": "东巴",
+    "atlas": "Words01_Atlas",
+    "category": "社会",
+    "subclass": "职业"
+  },
+  {
+    "id": 2,
+    "name": "身体",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 3,
+    "name": "头",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 4,
+    "name": "脸",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 5,
+    "name": "耳朵",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 6,
+    "name": "眼睛",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 7,
+    "name": "眉毛",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 8,
+    "name": "嘴巴",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 9,
+    "name": "鼻子",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 10,
+    "name": "牙齿",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 11,
+    "name": "臼齿",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 12,
+    "name": "犬牙",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 13,
+    "name": "舌头",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 14,
+    "name": "胡须",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 15,
+    "name": "头发",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 16,
+    "name": "脖子",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 17,
+    "name": "手臂",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 18,
+    "name": "手",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 19,
+    "name": "掌纹",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 20,
+    "name": "手指甲",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 21,
+    "name": "腰",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 22,
+    "name": "腿",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 23,
+    "name": "脚",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 24,
+    "name": "脚底板",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 25,
+    "name": "心",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 26,
+    "name": "肺",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 27,
+    "name": "肝",
+    "atlas": "Words01_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 28,
+    "name": "胃",
+    "atlas": "Words02_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 29,
+    "name": "胆",
+    "atlas": "Words02_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 30,
+    "name": "肾",
+    "atlas": "Words02_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 31,
+    "name": "肠子",
+    "atlas": "Words02_Atlas",
+    "category": "生理",
+    "subclass": "部位"
+  },
+  {
+    "id": 32,
+    "name": "人",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 33,
+    "name": "人类",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 34,
+    "name": "我",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 35,
+    "name": "我们",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 36,
+    "name": "你",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 37,
+    "name": "你们",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 38,
+    "name": "他",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 39,
+    "name": "家",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 40,
+    "name": "男人;丈夫",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 41,
+    "name": "女人;妻子",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 42,
+    "name": "老人(男);祖父",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 43,
+    "name": "老人(女);祖母",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 44,
+    "name": "祖先",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 45,
+    "name": "爸爸",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 46,
+    "name": "妈妈",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 47,
+    "name": "孙子",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 48,
+    "name": "孙女",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 49,
+    "name": "哥哥",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 50,
+    "name": "弟弟",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 51,
+    "name": "姐姐",
+    "atlas": "Words02_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 52,
+    "name": "妹妹",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "称谓"
+  },
+  {
+    "id": 53,
+    "name": "纳西族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 54,
+    "name": "汉族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 55,
+    "name": "藏族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 56,
+    "name": "普米族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 57,
+    "name": "白族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 58,
+    "name": "彝族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 59,
+    "name": "傈僳族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 60,
+    "name": "蒙古族",
+    "atlas": "Words03_Atlas",
+    "category": "社会",
+    "subclass": "民族"
+  },
+  {
+    "id": 61,
+    "name": "世界",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "none"
+  },
+  {
+    "id": 62,
+    "name": "天地",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "none"
+  },
+  {
+    "id": 63,
+    "name": "彩虹",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 64,
+    "name": "天空",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 65,
+    "name": "太阳",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 66,
+    "name": "日光",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 67,
+    "name": "日出",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 68,
+    "name": "日落",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 69,
+    "name": "月亮",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 70,
+    "name": "月光",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 71,
+    "name": "月出",
+    "atlas": "Words03_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 72,
+    "name": "月落",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 73,
+    "name": "星星",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 74,
+    "name": "云",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 75,
+    "name": "雾",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 76,
+    "name": "雨",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 77,
+    "name": "雪",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 78,
+    "name": "闪电",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 79,
+    "name": "雷",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 80,
+    "name": "风",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 81,
+    "name": "晴天",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 82,
+    "name": "阴天",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "天象"
+  },
+  {
+    "id": 83,
+    "name": "大地",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 84,
+    "name": "田野",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 85,
+    "name": "草原",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 86,
+    "name": "高原",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 87,
+    "name": "山",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 88,
+    "name": "玉龙雪山",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 89,
+    "name": "水",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 90,
+    "name": "泉",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 91,
+    "name": "江",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 92,
+    "name": "金沙江",
+    "atlas": "Words04_Atlas",
+    "category": "自然",
+    "subclass": "地理"
+  },
+  {
+    "id": 93,
+    "name": "时间",
+    "atlas": "Words04_Atlas",
+    "category": "时间",
+    "subclass": "none"
+  },
+  {
+    "id": 94,
+    "name": "春天",
+    "atlas": "Words04_Atlas",
+    "category": "时间",
+    "subclass": "季节"
+  },
+  {
+    "id": 95,
+    "name": "夏天",
+    "atlas": "Words04_Atlas",
+    "category": "时间",
+    "subclass": "季节"
+  },
+  {
+    "id": 96,
+    "name": "秋天",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "季节"
+  },
+  {
+    "id": 97,
+    "name": "冬天",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "季节"
+  },
+  {
+    "id": 98,
+    "name": "白天",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 99,
+    "name": "清晨",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 100,
+    "name": "中午",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 101,
+    "name": "下午",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 102,
+    "name": "夜晚",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 103,
+    "name": "半夜",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "时段"
+  },
+  {
+    "id": 104,
+    "name": "一月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 105,
+    "name": "二月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 106,
+    "name": "三月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 107,
+    "name": "四月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 108,
+    "name": "五月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 109,
+    "name": "六月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 110,
+    "name": "七月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 111,
+    "name": "八月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 112,
+    "name": "九月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 113,
+    "name": "十月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 114,
+    "name": "十一月",
+    "atlas": "Words05_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 115,
+    "name": "十二月",
+    "atlas": "Words06_Atlas",
+    "category": "时间",
+    "subclass": "月份"
+  },
+  {
+    "id": 116,
+    "name": "东",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 117,
+    "name": "南",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 118,
+    "name": "西",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 119,
+    "name": "北",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 120,
+    "name": "中",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 121,
+    "name": "上",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 122,
+    "name": "下",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 123,
+    "name": "左",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 124,
+    "name": "右",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 125,
+    "name": "内",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  },
+  {
+    "id": 126,
+    "name": "外",
+    "atlas": "Words06_Atlas",
+    "category": "空间",
+    "subclass": "方位"
+  }
+]
