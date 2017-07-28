@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UITest : UIPage
 {
+    Text txt;
+
     public UITest() : base(UIType.Normal, UIMode.HideOther, UICollider.None)
     {
         uiPath = "UI/UITest";
@@ -17,10 +18,12 @@ public class UITest : UIPage
                    ShowPage<UITip> ( );
                    SceneManager.LoadScene(1);
                } );
+
+        txt = GameObject.Find("btnLeftUp/Text").GetComponent<Text>();
     }
 
-    void Start()
+    public override void Refresh()
     {
-        
+        txt.text = Localization.Get("info1");
     }
 }

@@ -8,12 +8,13 @@ public class GameInit : MonoBehaviour
 
     void Awake()
     {
-        if(!isInited)
+        if (!isInited)
         {
             GameObject go = new GameObject("GameMgr");
             go.AddComponent<DBReadOnly>();
             go.AddComponent<DBReadWrite>();
             DontDestroyOnLoad(go);
+            Localization.Init();
             UIPage.ShowPage<UITest>();
             isInited = true;
         }

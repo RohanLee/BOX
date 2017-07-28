@@ -1,0 +1,6 @@
+﻿info1 = temp1
+info2 = temp2
+//测试
+info3 = temp3
+
+info4 = temp4
