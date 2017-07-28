@@ -12,7 +12,6 @@ public class UITest : UIPage
 
     public override void Awake ( GameObject go )
     {
-
         this.transform.Find ( "btnCenter" ).GetComponent<Button> ( ).onClick.AddListener ( ( ) =>
                {
                    ShowPage<UITip> ( );
