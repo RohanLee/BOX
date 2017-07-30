@@ -6,7 +6,7 @@ public class UITip : UIPage
 {
     public UITip() : base(UIType.PopUp, UIMode.DoNothing, UICollider.Normal)
     {
-        uiPath = "UI/UITip";
+        uiPath = "UITip";
     }
 
     public override void Awake(GameObject go)

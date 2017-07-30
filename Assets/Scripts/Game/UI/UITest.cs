@@ -8,7 +8,7 @@ public class UITest : UIPage
 
     public UITest() : base(UIType.Normal, UIMode.HideOther, UICollider.None)
     {
-        uiPath = "UI/UITest";
+        uiPath = "UIMain";
     }
 
     public override void Awake ( GameObject go )

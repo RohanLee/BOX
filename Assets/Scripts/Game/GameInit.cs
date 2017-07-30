@@ -13,6 +13,7 @@ public class GameInit : MonoBehaviour
             GameObject go = new GameObject("GameMgr");
             go.AddComponent<DBReadOnly>();
             go.AddComponent<DBReadWrite>();
+            go.AddComponent<PlayerController>();
             DontDestroyOnLoad(go);
             Localization.Init();
             UIPage.ShowPage<UITest>();
