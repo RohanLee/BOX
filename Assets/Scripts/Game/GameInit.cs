@@ -6,6 +6,8 @@ public class GameInit : MonoBehaviour
     //必须是静态 否则返回场景该值重置
     private static bool isInited = false;
 
+    public static Transform joystick;
+
     void Awake()
     {
         if (!isInited)
@@ -17,6 +19,7 @@ public class GameInit : MonoBehaviour
             DontDestroyOnLoad(go);
             Localization.Init();
             UIPage.ShowPage<UITest>();
+            UIPage.ShowPage<UIJoystick>();
             isInited = true;
         }
     }
@@ -24,5 +27,6 @@ public class GameInit : MonoBehaviour
     private void Start()
     {
         Destroy(this.gameObject);
+
     }
 }

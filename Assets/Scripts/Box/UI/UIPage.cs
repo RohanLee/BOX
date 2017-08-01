@@ -174,7 +174,7 @@ public abstract class UIPage
     /// </summary>
     protected void Show(Action callback)
     {
-        UIRoot.Instance.StartCoroutine(AsyncShow(callback));
+        UICore.Instance.StartCoroutine(AsyncShow(callback));
     }
 
     IEnumerator AsyncShow(Action callback)
@@ -240,7 +240,7 @@ public abstract class UIPage
 
     protected void AnchorUIGameObject(GameObject ui)
     {
-        if (UIRoot.Instance == null || ui == null) return;
+        if (UICore.Instance == null || ui == null) return;
 
         this.gameObject = ui;
         this.transform = ui.transform;
@@ -265,15 +265,15 @@ public abstract class UIPage
 
         if (type == UIType.Fixed)
         {
-            ui.transform.SetParent(UIRoot.Instance.fixedRoot);
+            ui.transform.SetParent(UICore.FixedRoot);
         }
         else if (type == UIType.Normal)
         {
-            ui.transform.SetParent(UIRoot.Instance.normalRoot);
+            ui.transform.SetParent(UICore.NormalRoot);
         }
         else if (type == UIType.PopUp)
         {
-            ui.transform.SetParent(UIRoot.Instance.popupRoot);
+            ui.transform.SetParent(UICore.PopupRoot);
         }
 
 

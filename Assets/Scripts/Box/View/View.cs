@@ -19,14 +19,16 @@ public class View
     static float moveDelay = 0.5f;
     static Vector3 velocity = Vector3.zero;
     static Vector3 viewOffset;
-    public static Vector3 viewAngle = Vector3.zero;
+    static Vector3 followPosition;
 
     static float rotateOffsetX, rotateOffsetY;
 
-    static float rotateSpeed = 2f;
-    static float rotateMinY = 5f;
-    static float rotateMaxY = 80f;
+    static float rotateSpeed = 5f;
+    static float rotateMinX = 5f;
+    static float rotateMaxX = 89f;
     static float zoomSpeed = 100f;
+    static float viewAngleH, viewAngleV;
+    static Vector3 viewDistance;
 
     //void LateUpdate()
     //{
@@ -43,6 +45,7 @@ public class View
             case ViewType.Free:
                 viewOffset = new Vector3(0f, 6f, -10f);
                 viewCamera.transform.position = viewTarget.position + viewOffset;
+                viewDistance = new Vector3(0f, 0f, -1 * Vector3.Distance(viewCamera.transform.position, viewTarget.position));
                 viewCamera.transform.LookAt(viewTarget);
                 rotateOffsetX = viewCamera.transform.eulerAngles.x;
                 rotateOffsetY = viewCamera.transform.eulerAngles.y;
@@ -61,7 +64,7 @@ public class View
     }
 
     /// <summary>
-    /// 视角控制外部调用
+    /// 视角控制外部调用 上帝视角与顶视角
     /// </summary>
     /// <param name="viewType">视角类型</param>
     /// <param name="viewTarget">视角目标</param>
@@ -69,9 +72,6 @@ public class View
     {
         switch (viewType)
         {
-            case ViewType.Free:
-                ViewFree(viewTarget);
-                break;
             case ViewType.God:
                 ViewGod(viewTarget);
                 break;
@@ -82,13 +82,32 @@ public class View
     }
 
     /// <summary>
+    /// 视角控制外部调用 自由视角专用
+    /// </summary>
+    /// <param name="viewTarget">视角目标</param>
+    /// <param name="offsetH">水平偏移输入</param>
+    /// <param name="offsetV">垂直偏移输入</param>
+    public static void ViewFollow(Transform viewTarget, float offsetH, float offsetV)
+    {
+        ViewFree(viewTarget, offsetH, offsetV);
+    }
+
+    /// <summary>
     /// 自由视角
     /// </summary>
     /// <param name="viewTarget">目标物体</param>
-    static void ViewFree(Transform viewTarget)
+    static void ViewFree(Transform viewTarget, float slideOffsetH, float slideOffsetV)
     {
-        viewCamera.transform.position = new Vector3(Mathf.SmoothDamp(viewCamera.transform.position.x, viewTarget.position.x + viewOffset.x, ref velocity.x, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.y, viewTarget.position.y + viewOffset.y, ref velocity.y, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.z, viewTarget.position.z + viewOffset.z, ref velocity.z, moveDelay));
+        viewCamera.transform.position = new Vector3(Mathf.SmoothDamp(viewCamera.transform.position.x, viewTarget.position.x + viewOffset.x, ref velocity.x, moveDelay), viewCamera.transform.position.y, Mathf.SmoothDamp(viewCamera.transform.position.z, viewTarget.position.z + viewOffset.z, ref velocity.z, moveDelay));
+        //rotateOffsetX -= slideOffsetV * rotateSpeed;
+        //rotateOffsetY += slideOffsetH * rotateSpeed;
+        //rotateOffsetX = Mathf.Clamp(rotateOffsetX, rotateMinX, rotateMaxX);
+        //rotateOffsetY = ClampAngle(rotateOffsetY);
+        //Quaternion rotation = Quaternion.Euler(rotateOffsetX, rotateOffsetY, 0);
         
+        //followPosition = viewTarget.position + rotation *  viewDistance;
+        //viewCamera.transform.position = new Vector3(Mathf.SmoothDamp(viewCamera.transform.position.x, followPosition.x, ref velocity.x, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.y, followPosition.y, ref velocity.y, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.z, followPosition.z, ref velocity.z, moveDelay));
+        viewCamera.transform.LookAt(viewTarget);
     }
 
     /// <summary>
@@ -114,16 +133,16 @@ public class View
     /// 旋转相机 只用于自由视角
     /// </summary>
     /// <param name="viewTarget"></param>
-    public static void ViewRotate(Transform viewTarget, float slideOffsetX, float slideOffsetY)
+    public static void ViewRotate(Transform viewTarget, float slideOffsetH, float slideOffsetV)
     {
-        rotateOffsetX -= slideOffsetY * rotateSpeed;
-        rotateOffsetY += slideOffsetX * rotateSpeed;
-
-        //rotateOffsetY = ClampAngle(rotateOffsetY, rotateMinY, rotateMaxY);
-        Quaternion rotation = Quaternion.Euler(0, rotateOffsetY, 0);
+        rotateOffsetX -= slideOffsetV * rotateSpeed;
+        rotateOffsetY += slideOffsetH * rotateSpeed;
+        rotateOffsetX = Mathf.Clamp(rotateOffsetX, rotateMinX, rotateMaxX);
+        rotateOffsetY = ClampAngle(rotateOffsetY);
+        Quaternion rotation = Quaternion.Euler(rotateOffsetX, rotateOffsetY, 0);
         Vector3 position = rotation * viewOffset + viewTarget.position;
-        viewTarget.rotation = rotation;
-        //viewCamera.transform.position = position;
+        viewCamera.transform.position = new Vector3(Mathf.SmoothDamp(viewCamera.transform.position.x, position.x, ref velocity.x, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.y, position.y, ref velocity.y, moveDelay), Mathf.SmoothDamp(viewCamera.transform.position.z, position.z, ref velocity.z, moveDelay));
+        viewCamera.transform.LookAt(viewTarget);
     }
 
     /// <summary>
@@ -142,7 +161,7 @@ public class View
     /// <param name="min">最小值</param>
     /// <param name="max">最大值</param>
     /// <returns></returns>
-    static float ClampAngle(float angle, float min, float max)
+    static float ClampAngle(float angle)
     {
         if(angle < -360)
         {
@@ -152,6 +171,6 @@ public class View
         {
             angle += 360;
         }
-        return Mathf.Clamp(angle, min, max);
+        return angle;
     }
 }

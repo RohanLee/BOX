@@ -2,51 +2,63 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public static GameObject hero;
+    public static GameObject Player;
 
     float moveSpeed = 0.1f;
-    float turnSpeed = 10f;
+    float turnSpeed = 5f;
 
-    float moveOffsetX, moveOffsetZ;
+    float offsetX, offsetZ;
+
+    float angle_Y, angle_X;
 
     float slideOffsetX, slideOffsetY;
 
     void Start()
     {
-        hero = Instantiate(Resources.Load("Hero")) as GameObject;
-        View.ViewInit(ViewType.Top, hero.transform);
+        Player = Instantiate(Resources.Load("Hero")) as GameObject;
+        View.ViewInit(ViewType.Free, Player.transform);
     }
 
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKey && (InputCore.GetMoveOffsetH() != 0f || InputCore.GetMoveOffsetV() != 0f))
         {
-            Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            Turn(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            Move(InputCore.GetMoveOffsetH(), InputCore.GetMoveOffsetV());
+            Turn(InputCore.GetMoveOffsetH(), InputCore.GetMoveOffsetV());
         }
-        View.ViewFollow(ViewType.Top, hero.transform);
 
+        View.ViewFollow(Player.transform, InputCore.GetViewOffsetH(),  InputCore.GetViewOffsetV());
     }
-
     
-
     void LateUpdate()
     {
-        
-        if (Input.anyKey)
+
+        if (Input.GetMouseButtonDown(0) && (InputCore.GetViewOffsetH() != 0f || InputCore.GetViewOffsetV() != 0f))
         {
             
-            //View.ViewRotate(hero.transform, Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            //View.ViewRotate(Player.transform, InputCore.GetViewOffsetV());
         }
     }
 
     private void Move(float moveOffsetX, float moveOffsetZ)
     {
-        hero.transform.position += new Vector3(moveOffsetX * moveSpeed, 0f, moveOffsetZ * moveSpeed);
+        Player.transform.position += new Vector3(moveOffsetX, 0, moveOffsetZ) * moveSpeed ;
     }
 
-    private void Turn(float moveOffsetX, float moveOffsetZ)
+    private void Turn(float turnOffsetX, float turnOffsetZ)
     {
-        hero.transform.forward = new Vector3(moveOffsetX, 0f, moveOffsetZ);
+        Player.transform.forward = new Vector3(turnOffsetX, 0, turnOffsetZ);
+        //angle_Y += turnOffsetX * turnSpeed;
+        //angle_X -= turnOffsetY * turnSpeed;
+        //if (angle_Y > 360)
+        //{
+        //    angle_Y -= 360;Z
+        //}
+        //else if(angle_Y < 360)
+        //{
+        //    angle_Y += 360;
+        //}
+        //Quaternion rotation = Quaternion.Euler(0f, angle_Y, 0f);
+        //Player.transform.rotation = rotation;
     }
 }
