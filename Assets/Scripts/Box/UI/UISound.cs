@@ -9,7 +9,6 @@ public class UISound : MonoBehaviour
 {
     AudioSource audioSource;
 
-    GameObject uiRoot;
     public AudioClip audioClip;
     public float volume = 1f, pitch = 1f;
 
@@ -20,12 +19,12 @@ public class UISound : MonoBehaviour
 
     public void Start()
     {
-        uiRoot = GameObject.Find("UIRoot");
+        
     }
 
     void PlaySound()
     {
-        audioSource = uiRoot.GetComponent<AudioSource>() ? uiRoot.GetComponent<AudioSource>() : uiRoot.gameObject.AddComponent<AudioSource>();
+        audioSource = UICore.UIRoot.GetComponent<AudioSource>() ? UICore.UIRoot.GetComponent<AudioSource>() : UICore.UIRoot.gameObject.AddComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.pitch = pitch;

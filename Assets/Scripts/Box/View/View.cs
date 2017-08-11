@@ -17,20 +17,19 @@ public enum ViewType
 public class View
 {
     static Camera viewCamera;
+
     static float moveDelay = 0.5f;
-    static Vector3 velocity = Vector3.zero;
-    static Vector3 viewOffset;
-    static Vector3 followPosition;
-    static Vector3 coreOffset;
-
-    static float rotateOffsetX, rotateOffsetY;
-
     static float rotateSpeed = 5f;
     static float rotateMinX = 3f;
     static float rotateMaxX = 89f;
     static float zoomSpeed = 100f;
-    static float viewAngleH, viewAngleV;
     static float viewDistance;
+
+    static Vector3 velocity = Vector3.zero;
+    static Vector3 viewOffset;
+    static Vector3 coreOffset;
+
+    
 
 
     public static void ViewInit(ViewType viewType, Transform viewTarget)
@@ -45,8 +44,6 @@ public class View
                 viewCamera.transform.position = viewTarget.position + viewOffset;
                 viewDistance = Vector3.Distance(viewCamera.transform.position, viewTarget.position);
                 viewCamera.transform.LookAt(viewTarget);
-                rotateOffsetX = viewCamera.transform.eulerAngles.x;
-                rotateOffsetY = viewCamera.transform.eulerAngles.y;
                 break;
             case ViewType.God:
                 viewOffset = new Vector3(5f, 10f, -10f);
@@ -133,7 +130,7 @@ public class View
     /// <param name="viewTarget"></param>
     public static void ViewRotate(Transform viewTarget, float slideOffsetH, float slideOffsetV)
     {
-        PlayerController.isTurn = false;
+        //PlayerController.isTurn = false;
         Vector3 originalPosition = viewCamera.transform.position;
         Quaternion originalRotation = viewCamera.transform.rotation;
         viewCamera.transform.RotateAround(viewTarget.position, viewTarget.up, rotateSpeed * slideOffsetH);
@@ -147,8 +144,8 @@ public class View
         }
         float rate = viewDistance / Vector3.Distance(viewCamera.transform.position, viewTarget.position);
         viewOffset = (viewCamera.transform.position - viewTarget.position) * rate;
-        PlayerController.playerForward = new Vector3( viewTarget.position.x - viewCamera.transform.position.x, 0, viewTarget.position.z - viewCamera.transform.position.z).normalized;
-        viewTarget.forward = PlayerController.playerForward; 
+        //PlayerController.PlayerForward = new Vector3( viewTarget.position.x - viewCamera.transform.position.x, 0, viewTarget.position.z - viewCamera.transform.position.z).normalized;
+        //viewTarget.forward = PlayerController.playerForward; 
     }
 
     /// <summary>

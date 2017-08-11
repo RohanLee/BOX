@@ -55,15 +55,15 @@ public class UICore : MonoBehaviour
         cs.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         cs.referenceResolution = new Vector2(1136f, 640f);
         cs.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-        
-        GameObject subRoot = CreateSubCanvasForRoot(go.transform, 250);
-        subRoot.name = "FixedRoot";
-        FixedRoot = subRoot.transform;
 
-        subRoot = CreateSubCanvasForRoot(go.transform, 0);
+        GameObject subRoot = CreateSubCanvasForRoot(go.transform, 0);
         subRoot.name = "NormalRoot";
         NormalRoot = subRoot.transform;
 
+        subRoot = CreateSubCanvasForRoot(go.transform, 250);
+        subRoot.name = "FixedRoot";
+        FixedRoot = subRoot.transform;
+        
         subRoot = CreateSubCanvasForRoot(go.transform, 500);
         subRoot.name = "PopupRoot";
         PopupRoot = subRoot.transform;
@@ -74,7 +74,6 @@ public class UICore : MonoBehaviour
         {
             GameObject.DestroyImmediate(esObj);
         }
-
         GameObject eventObj = new GameObject("EventSystem");
         eventObj.layer = LayerMask.NameToLayer("UI");
         eventObj.transform.SetParent(go.transform);

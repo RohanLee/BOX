@@ -14,7 +14,7 @@ public class LocalData
     /// </summary>
     /// <param name="name">数据名</param>
     /// <returns></returns>
-    public static object LocalDataGet(string name)
+    public static object Get(string name)
     {
         if (PlayerPrefs.HasKey(name))
         {
@@ -39,7 +39,7 @@ public class LocalData
     /// </summary>
     /// <param name="name">数据名</param>
     /// <param name="value">数据值</param>
-    public static void LocalDataSave(string name, object value)
+    public static void Set(string name, object value)
     {
         if (value.GetType() == typeof(int))
         {
