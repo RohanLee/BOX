@@ -151,4 +151,17 @@ public class UITools
         str = num.ToString();
         return str;
     }
+
+    /// <summary>
+    /// 动态播放声音
+    /// </summary>
+    /// <param name="source"></param>
+    /// <param name="str"></param>
+    public static void PlaySound(GameObject go, string str)
+    {
+        AudioSource source = go.GetComponent<AudioSource>() ? go.GetComponent<AudioSource>() : go.AddComponent<AudioSource>();
+        AudioClip clip = (AudioClip)Resources.Load(str, typeof(AudioClip));//调用Resources方法加载AudioClip资源
+        source.clip = clip;
+        source.Play();
+    }
 }

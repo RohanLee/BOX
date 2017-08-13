@@ -180,14 +180,7 @@ public class DataTools
         string[] values = new string[fieldInfos.Length];
         for (int i = 0; i < fieldInfos.Length; i++)
         {
-            if (fieldInfos[i].GetType() == typeof(string))
-            {
-                values[i] = "'" + fieldInfos[i].GetValue(t).ToString() + "'";//写入数据库时原本string字段的值必须加单引号 否则报错 此处统一加单引号
-            }
-            else
-            {
-                values[i] = fieldInfos[i].GetValue(t).ToString();
-            }
+            values[i] = fieldInfos[i].GetValue(t).ToString();
         }
         return values;
     }

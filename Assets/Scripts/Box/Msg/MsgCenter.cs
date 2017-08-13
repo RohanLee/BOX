@@ -19,7 +19,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventNameEnum">消息名 也可用方法名简化替代</param>
     /// <param name="func">对应的方法名</param>
-    public static void MsgRegister(string eventName, Action<object[]> func)
+    public static void Add(string eventName, Action<object[]> func)
     {
         if (msgHanldeArray.ContainsKey(eventName))
         {
@@ -36,7 +36,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
     /// <param name="func">对应的方法</param>
-    public static void MsgRegister(string eventName, Action<object> func)
+    public static void Add(string eventName, Action<object> func)
     {
         if (msgHanlde.ContainsKey(eventName))
         {
@@ -53,7 +53,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
     /// <param name="func">对应的方法</param>
-    public static void MsgRegister(string eventName, Action<object, object> func)
+    public static void Add(string eventName, Action<object, object> func)
     {
         if (msgHanldes.ContainsKey(eventName))
         {
@@ -75,7 +75,7 @@ public class MsgCenter
     /// <param name="eventNameEnum">消息名 也可用方法名简化替代</param>
     /// <param name="objs">参数组</param>
     /// <returns></returns>
-    public static bool MsgTigger(string eventName, params object[] objs)
+    public static bool Get(string eventName, params object[] objs)
     {
         Action<object[]> fun;
         if (msgHanldeArray.TryGetValue(eventName, out fun))
@@ -90,14 +90,14 @@ public class MsgCenter
     /// 消息触发事件 带一个参数
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
-    /// <param name="obj">参数</param>
+    /// <param name="param">参数</param>
     /// <returns></returns>
-    public static bool MsgTigger(string eventName, object obj)
+    public static bool Get(string eventName, object param)
     {
         Action<object> fun;
         if (msgHanlde.TryGetValue(eventName, out fun))
         {
-            fun(obj);
+            fun(param);
             return true;
         }
         return false;
@@ -107,15 +107,15 @@ public class MsgCenter
     /// 消息触发事件 带两个参数
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
-    /// <param name="obj1">参数1</param>
-    /// <param name="obj2">参数2</param>
+    /// <param name="param1">参数1</param>
+    /// <param name="param2">参数2</param>
     /// <returns></returns>
-    public static bool MsgTigger(string eventName, object obj1, object obj2)
+    public static bool Get(string eventName, object param1, object param2)
     {
         Action<object, object> fun;
         if (msgHanldes.TryGetValue(eventName, out fun))
         {
-            fun(obj1, obj2);
+            fun(param1, param2);
             return true;
         }
         return false;
@@ -130,7 +130,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventNameEnum">消息名 也可用方法名简化替代</param>
     /// <param name="func">对应的方法</param>
-    public static void MsgRemove(string eventName, Action<object[]> func)
+    public static void Del(string eventName, Action<object[]> func)
     {
         if (msgHanldeArray.ContainsKey(eventName))
         {
@@ -145,7 +145,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
     /// <param name="func"></param>
-    public static void MsgRemove(string eventName, Action<object> func)
+    public static void Del(string eventName, Action<object> func)
     {
         if (msgHanlde.ContainsKey(eventName))
         {
@@ -160,7 +160,7 @@ public class MsgCenter
     /// </summary>
     /// <param name="eventName">消息名 也可用方法名简化替代</param>
     /// <param name="func"></param>
-    public static void MsgRemove(string eventName, Action<object, object> func)
+    public static void Del(string eventName, Action<object, object> func)
     {
         if (msgHanldes.ContainsKey(eventName))
         {
@@ -181,7 +181,7 @@ public class Register
 {
     void Start()
     {
-        MsgCenter.MsgRegister("Register_MsgRegister", MsgRegister);
+        MsgCenter.Add("Register_MsgRegister", MsgRegister);
     }
 
     void MsgRegister(object[] objs)
@@ -202,7 +202,7 @@ public class Trigger
         fts.Add(0.1f);
         fts.Add(0.2f);
         Object[] objs = new object[] { new int[] { 0, 1, 2 }, "test", fts };//只要object[]中的参数的类型/数量/位置与消息定义是方法参数的位置一致即可
-        MsgCenter.MsgTigger("Register_MsgRegister", objs);
+        MsgCenter.Get("Register_MsgRegister", objs);
     }
 }
 */

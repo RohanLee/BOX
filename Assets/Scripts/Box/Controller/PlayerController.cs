@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Player = Instantiate(Resources.Load("Hero")) as GameObject;
+        Player = Pool.Get("Hero");
         View.ViewInit(ViewType.Free, Player.transform);
     }
 

@@ -21,7 +21,7 @@ public class DBAccess
     {
     }
 
-    #region 基础操作 ///////////////////////////////////////////////////////////////////
+    #region 基础操作 /////////////////////////////////////////////////////////////
 
     /// <summary>
     /// 打开数据库连接
@@ -298,17 +298,22 @@ public class DBAccess
     #endregion
 
 
-    #region 封装使用 ///////////////////////////////////////////////////////////////////
+    #region 封装使用 /////////////////////////////////////////////////////////////
 
     /// <summary>
     /// 增加一条数据
     /// </summary>
     /// <param name="tableName">表名</param>
     /// <param name="values">所有字段的值组成的字符串组</param>
-    public static void DBAdd(string tableName, string[] values)
+    public static void Add(string tableName, string[] values)
     {
+        string[] _values = new string[values.Length];
+        for (int i = 0; i < values.Length; i++)
+        {
+            _values[i] = "'" + values[i] + "'";
+        }
         DBAccess db = new DBAccess(DBReadWrite.DBReadWritePath);
-        db.AddData(tableName, values);
+        db.AddData(tableName, _values);
         db.CloseDB();
     }
 
@@ -320,10 +325,15 @@ public class DBAccess
     /// <param name="values">字段名对应的要修改的值 对应多个</param>
     /// <param name="keyName">字段名 一般是ID</param>
     /// <param name="keyValue">字段对应的值 一般就是ID值</param>
-    public static void DBUpdate(string tableName, string[] propertys, string[] values, string keyName, string keyValue)
+    public static void Set(string tableName, string[] propertys, string[] values, string keyName, string keyValue)
     {
+        string[] _values = new string[values.Length];
+        for (int i = 0; i < values.Length; i++)
+        {
+            _values[i] = "'" + values[i] + "'";
+        }
         DBAccess db = new DBAccess(DBReadWrite.DBReadWritePath);
-        db.UpdateData(tableName, propertys, values, keyName, keyValue);
+        db.UpdateData(tableName, propertys, _values, keyName, keyValue);
         db.CloseDB();
     }
 
@@ -333,7 +343,7 @@ public class DBAccess
     /// <param name="tableName">表名</param>
     /// <param name="propertys">键的字段名 一般是"ID"</param>
     /// <param name="values">键的值</param>
-    public static void DBDelete(string tableName, string[] propertys, string[] values)
+    public static void Del(string tableName, string[] propertys, string[] values)
     {
         DBAccess db = new DBAccess(DBReadWrite.DBReadWritePath);
         db.DeleteData(tableName, propertys, values);

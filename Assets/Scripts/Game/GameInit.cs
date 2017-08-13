@@ -27,6 +27,5 @@ public class GameInit : MonoBehaviour
     private void Start()
     {
         Destroy(this.gameObject);
-
     }
 }
